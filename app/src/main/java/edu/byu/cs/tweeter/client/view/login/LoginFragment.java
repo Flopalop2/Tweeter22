@@ -60,15 +60,15 @@ public class LoginFragment extends Fragment implements AuthenticationPresenter.A
             @Override
             public void onClick(View view) {
                 // Login and move to MainActivity.
-                //try {
+                try {
                     presenter.logIn(alias.getText().toString(),password.getText().toString());
 
                     //loginInToast = Toast.makeText(getContext(), "Logging In...", Toast.LENGTH_LONG);
                     //loginInToast.show();
                     //displayAccessingMessage();
-                //} catch (Exception e) {
-                    //errorView.setText(e.getMessage());
-                //}
+                } catch (Exception e) {
+                    errorView.setText(e.getMessage());
+                }
             }
         });
 

@@ -19,7 +19,8 @@ public class LoginPresenter extends AuthenticationPresenter{
 
             userService.logIn(alias, password, observer);
         } catch (Exception e) {
-            observer.handleException(e);
+            throw e;
+            //observer.handleException(e);
         }
     }
 
